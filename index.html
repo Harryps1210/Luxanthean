@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Art of Modern Friendships — A Mystical Guide</title>
+  <meta name="description" content="A soulful, practical guide to building real bonds in a disconnected world." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus:wght@400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0a0b15; --ink:#e9e7ff; --muted:#b5b2d9; --gold:#d8c27a; --accent:#7c7ae6; --accent2:#a36fe3;
+      --card:#121327; --stroke:rgba(255,255,255,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:var(--gold);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .nav{
+      position:sticky;top:0;z-index:50;backdrop-filter: blur(8px);
+      background:linear-gradient(180deg, rgba(10,11,21,.8), rgba(10,11,21,.4));
+      border-bottom:1px solid var(--stroke);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .sigil{
+      width:36px;height:36px;border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, #ffe7a6, #7b66ff 40%, #1a1b34 70%);
+      box-shadow:0 0 20px rgba(255,231,166,.35), inset 0 0 18px rgba(255,255,255,.2);
+      position:relative;overflow:hidden;
+    }
+    .sigil:after{
+      content:"";position:absolute;inset:0;
+      background:conic-gradient(from 120deg, transparent 0 70%, rgba(255,255,255,.08) 70% 100%);
+      mix-blend-mode:screen;
+    }
+    .brand h1{font-family:Marcellus,serif;font-size:18px;letter-spacing:.6px;margin:0}
+    .nav a.btn{padding:10px 16px;border:1px solid var(--stroke);border-radius:14px}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:white;border:none;box-shadow:0 8px 24px rgba(124,122,230,.35);
+    }
+    .btn-ghost{color:var(--ink)}
+    .hero{
+      position:relative;overflow:hidden;border-radius:var(--radius);
+      background:
+        radial-gradient(1000px 600px at 20% -10%, rgba(160,130,255,.18), transparent 60%),
+        radial-gradient(800px 500px at 120% 20%, rgba(255,228,170,.10), transparent 65%),
+        linear-gradient(180deg, #0b0c1b 0%, #0a0b15 80%);
+      border:1px solid var(--stroke); box-shadow:var(--shadow); margin-top:22px;
+    }
+    .stars{position:absolute;inset:0;pointer-events:none;background-image:
+      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.7), transparent 60%),
+      radial-gradient(1.5px 1.5px at 60% 70%, rgba(255,255,255,.5), transparent 60%),
+      radial-gradient(1.2px 1.2px at 80% 20%, rgba(255,255,255,.55), transparent 60%),
+      radial-gradient(1.5px 1.5px at 35% 80%, rgba(255,255,255,.45), transparent 60%);
+      opacity:.7;filter:saturate(120%) brightness(120%);
+    }
+    .hero-inner{padding:70px 28px 64px;display:grid;gap:16px;place-items:center;text-align:center}
+    .title{font-family:Marcellus,serif;font-size:clamp(28px,4.2vw,54px);line-height:1.12;margin:0}
+    .subtitle{color:var(--muted);max-width:840px;font-size:clamp(16px,1.8vw,20px)}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .section{margin:56px 0;padding:0}
+    .card{background:linear-gradient(180deg, #11122a, #0f1024);border:1px solid var(--stroke);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){ .grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:1.2fr 1fr} }
+    .eyebrow{letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:12px}
+    h2{font-family:Marcellus,serif;font-size:clamp(22px,3vw,34px);margin:8px 0 10px}
+    p{color:#dcdaf7;line-height:1.75}
+    .list{margin:0;padding-left:18px;color:#dcdaf7}
+    .quote{font-family:Marcellus,serif;font-size:20px;color:#efeaff;border-left:3px solid var(--accent);padding-left:14px;margin:0}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:#0f1030;font-size:12px;color:#cfcdf7}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent);margin:28px 0}
+    .footer{margin:36px 0 18px;color:#9f9cc9;font-size:13px;text-align:center}
+    .glow{box-shadow:0 0 0 1px rgba(255,255,255,.06), 0 0 60px rgba(124,122,230,.15), inset 0 0 50px rgba(255,255,255,.02)}
+    .pill{padding:12px 18px;border-radius:999px;border:1px solid var(--stroke);display:inline-flex;gap:10px;align-items:center}
+    .kicker{color:#cfcdf7}
+    .faq dt{font-weight:600;margin:14px 0 6px}
+    .faq dd{margin:0 0 12px 0;color:#dcdaf7}
+    .anchor{scroll-margin-top:90px}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <h1>The Art of Modern Friendships</h1>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="#peek" class="btn btn-ghost">Sneak Peek</a>
+        <a href="#free-chapter" class="btn btn-ghost">Free Chapter</a>
+        <a href="#get-book" class="btn btn-primary">Get the Book</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="wrap hero glow" id="top">
+    <div class="stars"></div>
+    <div class="hero-inner">
+      <span class="eyebrow">A soulful map for real connection</span>
+      <h1 class="title">Unlock the Hidden Secrets of Modern Friendships</h1>
+      <p class="subtitle">
+        In a world of constant pings and shallow feeds, discover a calmer,
+        wiser way to attract, build, and nurture the bonds your life is asking for.
+      </p>
+      <div class="cta-row">
+        <a href="#why" class="pill kicker">Why friendships feel harder →</a>
+        <a href="#free-chapter" class="pill kicker">Get a free chapter →</a>
+        <a href="#get-book" class="pill btn-primary" style="border:none">Begin your journey →</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- WHY / PAIN -->
+    <section id="why" class="section anchor">
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="eyebrow">Why this book exists</span>
+          <h2>Friendship isn’t broken—you’re just surrounded by noise.</h2>
+          <p>
+            Loneliness has quietly become the background hum of modern life.
+            We’re connected to thousands, yet unseen by a few. Attention is scattered,
+            trust is thin, and small talk drowns out what is sacred.
+          </p>
+          <ul class="list">
+            <li>End the cycle of shallow chats and ghosting.</li>
+            <li>Attract your people—without performing or pretending.</li>
+            <li>Build bonds that feel calm, nourishing, and real.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="quote">“When you lower the noise, true signals appear. The right people were never far—
+          you just needed a clearer frequency.”</p>
+          <div class="divider"></div>
+          <span class="badge">Gentle • Practical • Mystical</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMISE / TRANSFORMATION -->
+    <section id="promise" class="section anchor">
+      <div class="card">
+        <span class="eyebrow">The transformation</span>
+        <h2>From wandering alone to walking with your tribe.</h2>
+        <div class="grid grid-3">
+          <div class="card glow">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">Clarity</h3>
+            <p>Recognize the patterns that keep you stuck and replace them with simple rituals for connection.</p>
+          </div>
+          <div class="card glow">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">Magnetism</h3>
+            <p>Learn the subtle skills that draw the right people—listening, presence, boundaries, and warmth.</p>
+          </div>
+          <div class="card glow">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">Longevity</h3>
+            <p>Cultivate trust the quiet way: through consistency, repair, and shared meaning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNEAK PEEK -->
+    <section id="peek" class="section anchor">
+      <div class="card">
+        <span class="eyebrow">Sneak peek</span>
+        <h2>The Chapters (a brief tour)</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">1. The Alchemy of Connection</h3>
+            <p>Why friendships feel mystical when they work—and how to make that chemistry repeatable.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">2. The Invisible Threads</h3>
+            <p>The subtle signals (voice, timing, cadence) that build trust faster than advice ever could.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">3. The Sacred Art of Listening</h3>
+            <p>How to be felt, not just heard—without draining yourself or overgiving.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">4. Boundaries as Invitations</h3>
+            <p>Use clear edges to create deeper safety and respect—no guilt, no coldness.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">5. Building Your Circle</h3>
+            <p>Practical rituals for meeting, nurturing, and keeping the people who fit your life.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:Marcellus,serif;margin:6px 0 8px">6. Repair & Renewal</h3>
+            <p>How to handle friction, disappointment, and distance—so bonds grow stronger over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / AUTHORITY -->
+    <section id="proof" class="section anchor">
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="eyebrow">What readers say</span>
+          <h2>“It felt like a wise friend walking beside me.”</h2>
+          <p style="margin-bottom:6px">⭐️⭐️⭐️⭐️⭐️ “Practical without being preachy. I finally understood why my friendships kept fading.”</p>
+          <p style="margin-bottom:6px">⭐️⭐️⭐️⭐️⭐️ “Grounded, gentle, and quietly life-changing.”</p>
+          <p class="muted" style="color:#bdb9ef">— Early reader feedback</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Roots</span>
+          <p>Inspired by timeless philosophies—Stoicism, Hermetic wisdom, and contemplative psychology—translated into daily practices that actually fit modern life.</p>
+          <p class="quote" style="margin-top:10px">“The right friendships are not found; they are revealed by who you become.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER (gentle, not pushy) -->
+    <section id="get-book" class="section anchor">
+      <div class="card glow">
+        <span class="eyebrow">Begin your journey</span>
+        <h2>This isn’t just a book—it’s a practice.</h2>
+        <p>Inside you’ll find short lessons, tiny experiments, and conversation prompts that fit busy days. Read one page. Try one shift. Feel the difference this week.</p>
+        <div class="cta-row">
+          <!-- Replace # with your live store link -->
+          <a class="pill btn-primary" style="border:none" href="https://bookgoodies.com/a/B0FQBWY8R9" target="_blank" rel="noopener">Get the Book</a>
+          <a class="pill kicker" href="#free-chapter">Read a free chapter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE CHAPTER (Google Form embed) -->
+    <section id="free-chapter" class="section anchor">
+      <div class="card">
+        <span class="eyebrow">Free chapter</span>
+        <h2>Try the first chapter—on us.</h2>
+        <p>Enter your email to receive a beautifully formatted PDF of Chapter 1, plus a weekly micro-practice for deeper, calmer friendships.</p>
+
+        <!-- Paste your Google Form's EMBED URL in src below -->
+        <div class="card" style="padding:0;overflow:hidden">
+          <iframe
+            src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYJwVDNssP4r0Rom7MhiGKy022m5xLIrZ4On7LOIIu1iiMkA/viewform?embedded=true" width="640" height="1580" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>"
+            width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0" style="border:0;display:block;background:#0b0c20">
+            Loading…
+          </iframe>
+        </div>
+
+        <p style="font-size:12px;color:#a7a4d6;margin-top:10px">
+          We never spam. Unsubscribe anytime with one click.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section anchor">
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="eyebrow">FAQ</span>
+          <dl class="faq">
+            <dt>Is this book practical or philosophical?</dt>
+            <dd>Both. Each idea ends with a tiny experiment you can try immediately.</dd>
+            <dt>Will this help if I’m introverted?</dt>
+            <dd>Yes. The practices are gentle and designed for low-drama, high-depth connection.</dd>
+            <dt>How long is it?</dt>
+            <dd>Short chapters; designed for results, not overwhelm.</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Who it’s for</span>
+          <ul class="list">
+            <li>People who feel socially “busy” but emotionally alone.</li>
+            <li>Those rebuilding after burnout, breakup, or big life change.</li>
+            <li>Anyone who wants fewer, better, calmer friendships.</li>
+          </ul>
+          <div class="divider"></div>
+          <a class="pill kicker" href="#get-book">I’m ready to begin →</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">
+      © <span id="y"></span> The Art of Modern Friendships • Crafted with calm.
+    </p>
+  </main>
+
+  <script>
+    // set year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Smooth scroll fix for iOS Safari (optional fallback)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          const el=document.querySelector(id);
+          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'})}
+        }
+      });
+    });
+  </script>
+</body>
+</html>
